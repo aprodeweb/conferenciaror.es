@@ -1,3 +1,4 @@
+url: http://aprodeweb.github.io/laconferenciarails.es
 exclude: ["Gemfile","Gemfile.lock",".ruby-version",".ruby-gemset"]
 defaults:
   -
