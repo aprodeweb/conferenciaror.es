@@ -1,8 +1,12 @@
 url: http://conferenciaror.es
 exclude: ["Gemfile","Gemfile.lock",".ruby-version",".ruby-gemset"]
+style: compressed
 defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
-    values:
+      values:
       layout: "default"
+      sass:
+		sass_dir: _sass
+		style: compressed
