@@ -1,0 +1,68 @@
+article {
+  section {
+    width: 50%;
+    height: 100%;
+    float: left;
+    &.part-one {
+      background: $gdark;
+      .grid {
+        margin: 10%;
+        h1 {
+          width: 100px;
+          height: 100px;
+          text-indent: -999999px;
+          color: transparent;
+          background: transparent url('../img/logo.png') center no-repeat;
+          background-size: 100%;
+          @extend .run;
+        }
+        ul {
+          overflow: hidden;
+          li {
+            width: 33.3%;
+            float: left;
+            color: white;
+            font-size: 2rem;
+            span {
+              display: block;
+              padding-top: 5px;
+              font-size: 1rem;
+            }
+          }
+        }
+        p {
+          margin: 0;
+          padding: 10px 0;
+          font-weight: 100;
+          letter-spacing: -0.2rem;
+          font-size: 3.5rem;
+          color: white;
+          span {
+            padding: 25px 0;
+            @extend .subtitle;
+            display: block;
+          }
+        }
+      }
+    }
+    &.part-two {
+      position: relative;
+      background: $gdark url('../img/conferor.jpg') center no-repeat;
+      background-size: auto 100%;
+      ul.stats {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        li {
+          color: white;
+          padding-bottom: 2rem;
+          font-size: 3rem;
+          font-weight: 100;
+          &.stats-titlelist {
+            @extend .subtitle;
+          }
+        }
+      }
+    }
+  }
+}

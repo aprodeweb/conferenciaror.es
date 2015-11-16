@@ -1,0 +1,13 @@
+@media only screen and (max-width: 1024px) {  
+	article {
+		section {
+			width: 100% !important;
+			min-height: 100% !important;
+			height: auto !important;
+			&.part-two {
+				display: none;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,28 @@
+header, footer {
+  position: fixed;
+}
+
+header {
+  top: 5%;
+  right: 5%;
+  z-index: 9999;
+  a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+  }
+}
+
+footer {
+  font-style: italic;
+  opacity: 0.8;
+  color: white;
+  text-align: right;
+  bottom: 5%;
+  right: 5%;
+  font-size: 0.8rem;
+  a {
+    color: white;
+  }
+}
