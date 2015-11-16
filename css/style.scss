@@ -1,7 +1,11 @@
 /* all css */
 
-@import "partials/_variables"; /* variables */
-@import "partials/_animation";  /* reset format */
-@import "partials/_layout";  /* reset format */
-@import "partials/_front";  /* reset format */
-@import "partials/_rwd"; /* variables */
+@import "../sass/_variables"; /* variables */
+@import "../sass/_animation";  /* reset format */
+@import "../sass/_layout";  /* reset format */
+@import "../sass/_front";  /* reset format */
+@import "../sass/_rwd"; /* variables */
+
+h1 {
+	color: red !important;
+}
