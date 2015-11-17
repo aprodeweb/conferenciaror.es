@@ -1,12 +1,15 @@
 article {
   section {
     width: 50%;
-    height: 100%;
+    position: relative;
     float: left;
     &.part-one {
       background: $gdark;
       .grid {
-        margin: 10%;
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        right: 10%;
         h1 {
           width: 100px;
           height: 100px;
@@ -14,7 +17,7 @@ article {
           color: transparent;
           background: transparent url('../img/logo.png') center no-repeat;
           background-size: 100%;
-          @extend .run;
+          @extend .flash;
         }
         ul {
           overflow: hidden;
@@ -37,6 +40,7 @@ article {
           letter-spacing: -0.2rem;
           font-size: 3.5rem;
           color: white;
+          @extend .flash;
           span {
             padding: 25px 0;
             @extend .subtitle;
@@ -46,18 +50,19 @@ article {
       }
     }
     &.part-two {
-      position: relative;
       background: $gdark url('../img/conferor.jpg') center no-repeat;
       background-size: auto 100%;
       ul.stats {
         position: absolute;
         bottom: 10%;
         left: 10%;
+        right: 10%;
         li {
           color: white;
           padding-bottom: 2rem;
           font-size: 3rem;
           font-weight: 100;
+          @extend .flash;
           &.stats-titlelist {
             @extend .subtitle;
           }

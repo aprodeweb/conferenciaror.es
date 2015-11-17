@@ -2,10 +2,19 @@
 	article {
 		section {
 			width: 100% !important;
-			min-height: 100% !important;
-			height: auto !important;
+			float: none;
+			&.part-one {
+				p {
+					font-size: 2.5rem !important;
+					letter-spacing: 0;
+				}
+			}
 			&.part-two {
-				display: none;
+				ul.stats {
+					li.stats-normal {
+						font-size: 2rem !important;
+					}
+				}
 			}
 		}
 	}
