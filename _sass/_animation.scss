@@ -1,0 +1,31 @@
+.flash {
+	animation: down_effect ease 1.2s both;
+	-webkit-animation: down_effect ease 1.2s both;
+	-moz-animation: down_effect ease 1.2s both;
+	-o-animation: down_effect ease  1.2s both;
+}
+
+@-moz-keyframes down_effect  {
+	0% { opacity: 0; }
+	40% { opacity: 0; transform: translateY(-150px);}
+	60% {  transform: translateY(70px); }
+	80% { transform: translateY(10px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+
+@-webkit-keyframes down_effect  {
+	0% { opacity: 0; }
+	40% { opacity: 0; transform: translateY(-150px);}
+	60% {  transform: translateY(70px); }
+	80% { transform: translateY(10px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes down_effect  {
+	0% { opacity: 0; }
+	40% { opacity: 0; transform: translateY(-150px);}
+	60% {  transform: translateY(70px); }
+	80% { transform: translateY(10px); }
+	100% { opacity: 1; transform: translateY(0); }
+}

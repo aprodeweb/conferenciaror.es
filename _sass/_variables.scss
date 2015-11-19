@@ -1,0 +1,54 @@
+/* reset */
+
+section, article, figure, header {
+	display: block;
+}
+
+body, h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+  padding: 0;       
+}  
+
+.t {
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}                        
+
+ul {
+  list-style-type: none;
+}              
+
+/* general */      
+
+html, body, article, section {
+  height: 100%;
+}
+
+body {      
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  background: white;
+}
+
+.c {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* colors */
+
+$gdark: #0a0d0e;
+$glight: #12191c;
+$ror: #b02236;
+
+/* style */
+
+.subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
