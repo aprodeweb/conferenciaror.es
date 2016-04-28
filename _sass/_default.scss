@@ -10,9 +10,8 @@ body {
 }
 .header-right {
   @include span-columns(2);
-  h1 {
-    width: 100px;
-    height: 100px;
+  .default-logo {
+    @include size(100px);
     text-indent: -999999px;
     color: transparent;
     background: transparent url("../img/logo.png") center no-repeat;
