@@ -1,3 +1,6 @@
 source 'https://rubygems.org'
 gem 'github-pages'
 gem 'jekyll-sass-converter'
+gem 'bourbon', '< 5.0.0.beta.0'
+gem 'neat'
+gem 'bitters'

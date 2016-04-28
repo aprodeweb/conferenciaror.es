@@ -1,4 +1,5 @@
 url: http://conferenciaror.es
+gems: [bourbon, neat]
 exclude: ["Gemfile","Gemfile.lock",".ruby-version",".ruby-gemset"]
 style: compressed
 defaults:
