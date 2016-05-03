@@ -8,17 +8,148 @@
 body {
   background: #000000;
 }
-.header-right {
+
+header {
+  //overflow: hidden;
+}
+
+p {
+  @include pad();
+  font-weight: 100;
+  font-size: 1rem;
+  color: white;
+}
+
+h1 {
+  color: white;
+  //padding-bottom: 1.33rem;
+  font-size: 400%;
+}
+
+h3 {
+  color: white;
+  padding-bottom: 1.33rem;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.default-logo {
+  @include media($mobile) {
+    width: 100%;
+  }
+
+  @include media($tablet) {
+    min-width: 72px;
+  }
   @include span-columns(2);
-  .default-logo {
-    @include size(100px);
-    text-indent: -999999px;
-    color: transparent;
-    background: transparent url("../img/logo.png") center no-repeat;
-    background-size: 100%;
+  @include omega;
+  text-align: center;
+  height: 100px;
+  background-size: 100%;
+  background: transparent url("../img/logo.png") center no-repeat;
+  color: transparent;
+  margin: 0 auto;
+  text-indent: -999999px;
+  background-size: contain;
+}
+
+.title {
+  @include span-columns(10);
+  @include omega;
+  text-align: right;
+  @include media($mobile) {
+    width: 100%;
+    text-align: center;
+  }
+
+  #conference-name {
+    @include media($tablet) {
+      font-size: 200%
+    }
+    text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+    color: $ruby !important;
+  }
+  //overflow: hidden;
+  #dates {
+    @include media($tablet) {
+      font-size: 1.5rem;
+    }
+    font-size: 2rem;
+    line-height: $base-line-height / 2;
   }
 }
+
+.speaker {
+  @include pad();
+
+  @include media($mobile) {
+    .highlights {
+      .data {
+        @include span-columns(12);
+      }
+      .avatar {
+        @include span-columns(12);
+        height: 15rem;
+      }
+    }
+  }
+
+  p {
+    padding: 0px;
+  }
+
+  .highlights {
+    @include span-columns(12);
+    .data {
+      @include span-columns(9);
+    }
+    .avatar {
+      @include span-columns(3);
+      height: 15rem;
+    }
+  }
+
+  .bio {
+    @include span-columns(12);
+  }
+
+  #a-patterson {
+    background: $gdark url('../img/aaronpatterson.jpg') center no-repeat;
+  }
+
+  #x-noria {
+    background: $gdark url('../img/xavinoria.jpg') center no-repeat;
+  }
+}
+
+
+
+
+
 .default_header {
   background: $gdark url('../img/conferor.jpg') center no-repeat;
   @include pad();
+}
+
+nav.navigation {
+  width: 100%;
+  text-align: right;
+  @include media($tablet) {
+    @include row();
+  }
+  a {
+    @include media($tablet) {
+      @include span-columns(4);
+      text-align: center;
+    }
+    &:nth-child(3n){
+      @include omega;
+    }
+    font-size: 75%;
+    display: inline-block;
+  }
 }

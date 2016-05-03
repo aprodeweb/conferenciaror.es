@@ -20,6 +20,7 @@ $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$ruby: #9B1935;
 
 // Font Colors
 $base-font-color: $dark-gray;
@@ -40,3 +41,11 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+// Media queries
+// tablet and below
+$tablet: max-width 768px;
+
+// mobile and below
+$mobile: max-width 480px;
+
