@@ -19,17 +19,43 @@
         <nav role="navigation">
           <ul id="js-navigation-menu" class="navigation-menu show">
             <li class="nav-link"><a href='/index.html'>Home</a></li>
-            <li class="nav-link"><a href='/c4p.html'>Call 4 Papers</a></li>
+            <li class="nav-link"><a href='https://goo.gl/12KG1u' target='_blank'>Call 4 Papers</a></li>
+            <li class="nav-link"><a href='/index.html#sponsor'>Sponsor!</a></li>
             <li class="nav-link"><a href='/coc.html'>Code of Conduct</a></li>
-            <li class="nav-link"><a href='/sponsor.html'>Sponsor!</a></li>
             <li class="nav-link"><a href="http://twitter.com/conferenciaror">@conferenciaror</a> </li>
           </ul>
         </nav>
       </div>
     </header>
-    {{ content }}
-    <footer>
-      footer
-    </footer>
+    <div id="content">
+      {{ content }}
+    </div>
+
+    <!--<div class="wrapper-for-content-outside-of-footer">
+      Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
+      </div>-->
+
+      <footer class="footer-2" role="contentinfo">
+        <div class="footer-logo">
+          <img src='img/logo.png' alt='manolo rubyto'>
+        </div>
+        <p>
+        Conferencia Rails, October 14-15<sup>th</sup> 2016
+        </p>
+
+        <div class="footer-secondary-links">
+          <ul>
+            <li><a href="/coc.html">Code of Conduct</a></li>
+          </ul>
+
+          <ul class="footer-social">
+            <li>
+              <a href="http://twitter.com/conferenciaror" target="_blank">
+                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
   </body>
 </html>

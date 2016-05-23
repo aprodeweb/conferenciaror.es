@@ -2,19 +2,70 @@
 ---
 /* all css */
 
+$ruby: #9C1936;
+
 @import "bourbon/bourbon";  /* reset format */
 @import "base/base";  /* reset format */
 @import "neat/neat";  /* reset format */
 
 html {
   box-sizing: border-box;
+  height: 100vh;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 body {
   margin: 0px;
+  height: 85%;
 }
 
 /* navigation */
 @import "navigation";
+@import "cards";
+@import "footer";
+
+div#content{
+  @include outer-container();
+  @include padding(1em);
+}
+
+h1, h2, h3, b, strong, a{
+  color: $ruby;
+}
+a:hover, a:active{
+  color: $ruby;
+  text-decoration: underline;
+}
+h1 {
+  font-size: 200%;
+  em.date {
+    display: block;
+    font-size: 75%;
+    font-weight: normal;
+  }
+}
+
+h2 {
+  margin-top: 2em;
+}
+.card{
+.card-image {
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  &.aaron{ 
+    background-color: black;
+    background-image: url('/img/aaron.patterson.jpg')
+  }
+  &.xavi{ 
+    background-color: black;
+    background-image: url('/img/xavi.noria.jpg')
+  }
+  &.submissions{ 
+    background-color: white;
+    background-image: url('/img/uncle.sam.jpg')
+  }
+}
+}

@@ -1,9 +1,87 @@
 ---
 title: near you
+speakers:
+  - name: Aaron Patterson
+    img: aaron
+    bio: |
+      Ruby, Rails and Rack Core contributor. Renowned
+      speaker at numerous international events,  and author of Nokogiri(XML
+      parser) and Psych(YAML parser) Aaron Patterson
+      (<a href='https://twitter.com/tenderlove' target='_blank'>@tenderlove</a>)
+      is one of Ruby's most respected and loved programmers. He has improved
+      ActiveRecord substantively in usability and performance and is also
+      on the Ruby and Rails security teams.
+  - name: Xavier Noria
+    img: xavi
+    bio: |
+     Famous for his excellent work on Rails documentation and Rails
+     Guides, Xavier Noria
+     (<a href='https://twitter.com/fxn' target='_blank'>@fxn</a>)
+     is Member of the Rails core team and Ruby Hero
+     Award winner in RailsConf 2010. A self-employed Ruby developer from
+     Barcelona, he has spoken at numerous Ruby and Rails conferences
+     across the world and is the author of Rails Contributors.
+  - name: Why not you?
+    img: submissions
+    bio: |
+      You can be the next speaker of Conferencia Rails, you just have to fill
+      our <a href='https://goo.gl/12KG1u'>Call for Papers Form</a> and send us
+      your fresh idea for a talk or a workshop.<br>
+
 ---
-<div id='content'>
-	Follow
-	<a href="http://twitter.com/conferenciaror">
-		@conferenciaror
-	</a>
-</div>
+<h1>Conferencia Rails <em class='date'>14-15th October 2016</em></h1>
+
+<p>
+Conferencia Rails is the most venerable large
+scale Spanish Ruby and Rails related event. It has held 6 editions,
+spawned 1 spin-off sister js event, received +1.500 attendees and
+brought +100 speakers
+</p>
+<h2> Who are the organizers?</h2>
+<p>Conferencia Rails is
+organized by the “Asociación para la Promoción del Dessarrollo
+web” (APRODEWEB) a non-profit, volunteer-driven association
+to promote web development in Spain. It has been organizing a
+conference on Ruby and Rails for the past 6 years,
+</p>
+<section id='speakers'>
+  <a name='#speakers'></a>
+  <h2>Speakers</h2>
+  <p>
+  We have confirmations from two international speakers:
+  </p>
+  <div class="cards">
+    {% for speaker in page.speakers %}
+
+    <div class="card">
+      <div class="card-image {{speaker.img}}">
+      </div>
+      <div class="card-header">
+        {{speaker.name}}
+      </div>
+      <div class="card-copy">
+        <p>{{speaker.bio}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id='sponsor'>
+  <a name='#sponsor'></a>
+  <h2>Sponsors</h2>
+  <p>
+  Do you want to have your Brand exposed to top notch Ruby and Rails developers
+  from all around the world?
+  </p>
+
+  <p>
+  <b>Now you can!</b>, become a sponsor of Conferencia Rails and show everyone
+  that you care for the community, by helping an awesome event come alive.
+  </p>
+
+  <p>If you are interested, download our
+  <a href='/sponsor.pdf' target='_blank'>sponsorship pamphlet</a></p>
+  </p>
+
+</section>

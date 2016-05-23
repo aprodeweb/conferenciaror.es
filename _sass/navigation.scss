@@ -26,6 +26,7 @@ header.navigation {
   z-index: 999;
 
   .navigation-wrapper {
+    @include outer-container();
     @include clearfix;
     position: relative;
     z-index: 9999;
