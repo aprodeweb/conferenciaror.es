@@ -1,0 +1,13 @@
+.row-wrapper {
+  @include row();
+
+  .outer-container {
+    @include outer-container;
+  }
+}
+
+header {
+  border: 1px solid white;
+  position: fixed;
+  top: 100%;
+}

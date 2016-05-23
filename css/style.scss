@@ -2,6 +2,10 @@
 ---
 /* all css */
 
+@import "bourbon/bourbon";  /* reset format */
+@import "base/base";  /* reset format */
+@import "neat/neat";  /* reset format */
+@import "../_sass/_default"; /* variables */
 @import "../_sass/_variables"; /* variables */
 @import "../_sass/_animation";  /* reset format */
 @import "../_sass/_layout";  /* reset format */
