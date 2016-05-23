@@ -38,6 +38,9 @@
   display: inline-block;
   padding: $base-spacing;
   width: 100%;
+  .footer-container {
+    @include outer-container();
+  }
 
   .footer-logo {
     margin-bottom: 1em;
