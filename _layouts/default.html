@@ -4,22 +4,32 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src='js/navigation.js'></script>
     <title>La Conferencia Rails - {{ page.title }}</title>
   </head>
   <body>
-  <header>
-    <nav>
-      <a href='/index.html'>Home</a>
-      <a href='/c4p.html'>Call 4 Papers</a>
-      <a href='/coc.html'>Code of Conduct</a>
-      <a href='/sponsor.html'>Sponsor!</a>
-    </nav>
-    Follow
-    <a href="http://twitter.com/conferenciaror">
-      @conferenciaror
-    </a>
-  </header>
+    <header class="navigation" role="banner">
+      <div class="navigation-wrapper">
+        <a href="/" class="logo">
+          <img src='img/logo.png' alt='manolo rubyto'>
+        </a>
+        <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+        <nav role="navigation">
+          <ul id="js-navigation-menu" class="navigation-menu show">
+            <li class="nav-link"><a href='/index.html'>Home</a></li>
+            <li class="nav-link"><a href='/c4p.html'>Call 4 Papers</a></li>
+            <li class="nav-link"><a href='/coc.html'>Code of Conduct</a></li>
+            <li class="nav-link"><a href='/sponsor.html'>Sponsor!</a></li>
+            <li class="nav-link"><a href="http://twitter.com/conferenciaror">@conferenciaror</a> </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     {{ content }}
+    <footer>
+      footer
+    </footer>
   </body>
 </html>

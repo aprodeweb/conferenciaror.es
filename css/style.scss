@@ -5,13 +5,16 @@
 @import "bourbon/bourbon";  /* reset format */
 @import "base/base";  /* reset format */
 @import "neat/neat";  /* reset format */
-@import "../_sass/_default"; /* variables */
-@import "../_sass/_variables"; /* variables */
-@import "../_sass/_animation";  /* reset format */
-@import "../_sass/_layout";  /* reset format */
-@import "../_sass/_front";  /* reset format */
-@import "../_sass/_rwd"; /* variables */
 
-h1 {
-	color: red !important;
+html {
+  box-sizing: border-box;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0px;
+}
+
+/* navigation */
+@import "navigation";
