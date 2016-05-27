@@ -9,15 +9,17 @@ $ruby: #9C1936;
 @import "neat/neat";  /* reset format */
 
 html {
+  height: 100%;
   box-sizing: border-box;
-  height: 100vh;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 body {
+  position: relative; /* enable footer positioning */
   margin: 0px;
-  height: 85%;
+  min-height: 100%; /* position footer at least on bottom of screen */
+  padding-bottom: 12em; /* safe space for footer */
 }
 
 /* navigation */

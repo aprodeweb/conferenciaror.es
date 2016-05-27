@@ -25,6 +25,8 @@
 // }
 
 .footer-2 {
+  position: absolute;
+  bottom: 0px;
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
   $medium-screen: 40em !default;
