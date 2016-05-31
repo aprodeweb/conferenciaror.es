@@ -26,6 +26,7 @@ body {
 @import "navigation";
 @import "cards";
 @import "footer";
+@import "tables";
 
 div#content{
   @include outer-container();
