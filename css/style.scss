@@ -53,22 +53,28 @@ h2 {
   margin-top: 2em;
 }
 .card{
-.card-image {
-  background-color: white;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  &.aaron{ 
-    background-color: black;
-    background-image: url('/img/aaron.patterson.jpg')
-  }
-  &.xavi{ 
-    background-color: black;
-    background-image: url('/img/xavi.noria.jpg')
-  }
-  &.submissions{ 
+  .card-image {
     background-color: white;
-    background-image: url('/img/uncle.sam.jpg')
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.aaron{ 
+      background-color: black;
+      background-image: url('/img/aaron.patterson.jpg')
+    }
+    &.xavi{ 
+      background-color: black;
+      background-image: url('/img/xavi.noria.jpg')
+    }
+    &.submissions{ 
+      background-color: white;
+      background-image: url('/img/uncle.sam.jpg');
+    }
   }
 }
+
+#c4p {
+  h2 {
+    display: inline-block;
+  }
 }
