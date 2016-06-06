@@ -58,15 +58,19 @@ h2 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    &.aaron{ 
+    &.aaron{
       background-color: black;
       background-image: url('/img/aaron.patterson.jpg')
     }
-    &.xavi{ 
+    &.xavi{
       background-color: black;
       background-image: url('/img/xavi.noria.jpg')
     }
-    &.submissions{ 
+    &.kerrizor{
+      background-color: black;
+      background-image: url('/img/kerrizor.png');
+    }
+    &.submissions{
       background-color: white;
       background-image: url('/img/uncle.sam.jpg');
     }
