@@ -3,6 +3,8 @@
 /* all css */
 
 $ruby: #9C1936;
+$medium-screen: 40em !default;
+$large-screen: 53.75em !default;
 
 @import "bourbon/bourbon";  /* reset format */
 @import "base/base";  /* reset format */
@@ -15,11 +17,23 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+/* texture */
+@import "textures";
+
 body {
   position: relative; /* enable footer positioning */
   margin: 0px;
   min-height: 100%; /* position footer at least on bottom of screen */
   padding-bottom: 12em; /* safe space for footer */
+  /* texture */
+  $texture-top-background: white;//lighten(#ddf0ef, 1%);
+  $texture-bottom-background: white; //darken($ruby, 20%);
+  @include texture(180deg, $texture-top-background, $texture-bottom-background, 85, 0);
+}
+
+section{
+  @include clearfix;
 }
 
 /* navigation */
@@ -28,9 +42,11 @@ body {
 @import "footer";
 @import "tables";
 
+
 div#content{
   @include outer-container();
-  @include padding(1em);
+  @include padding(2em);
+  background-color: white;
 }
 
 h1, h2, h3, b, strong, a{
@@ -52,35 +68,38 @@ h1 {
 h2 {
   margin-top: 2em;
 }
-.card{
-  .card-image {
-    background-color: white;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    &.aaron{
-      background-color: black;
-      background-image: url('/img/aaron.patterson.jpg')
-    }
-    &.xavi{
-      background-color: black;
-      background-image: url('/img/xavi.noria.jpg')
-    }
-    &.kerrizor{
-      background-color: black;
-      background-image: url('/img/kerrizor.jpg');
-    }
-    &.chancancode{
-      background-color: black;
-      background-image: url('/img/chancancode.png');
-    }
-    &.submissions{
+.cards{
+  @include media($medium-screen){ width: 66%; } /* avoid 3+1 */
+  margin: auto;
+  .card{
+    .card-image {
       background-color: white;
-      background-image: url('/img/uncle.sam.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      &.aaron{
+        background-color: black;
+        background-image: url('/img/aaron.patterson.jpg')
+      }
+      &.xavi{
+        background-color: black;
+        background-image: url('/img/xavi.noria.jpg')
+      }
+      &.kerrizor{
+        background-color: black;
+        background-image: url('/img/kerrizor.jpg');
+      }
+      &.chancancode{
+        background-color: black;
+        background-image: url('/img/chancancode.png');
+      }
+      &.submissions{
+        background-color: white;
+        background-image: url('/img/uncle.sam.jpg');
+      }
     }
   }
 }
-
 #c4p {
   h2 {
     display: inline-block;
@@ -99,19 +118,21 @@ h2 {
     margin: 0 5px 5px 0;
     &.closed{
       background: #ccc;
+      @include texture(180deg, #ccc, darken(#ccc, 20%), 54, 0);
       a{ color: #333; }
     }
     &.active{
-    -ms-transform: rotate(-1deg); /* IE 9 */
-    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
-    transform: rotate(-1deg);  
+      @include texture(180deg, #e2deb4, darken(#e2deb4, 20%), 54, 0);
+      -ms-transform: rotate(-1deg); /* IE 9 */
+      -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
+      transform: rotate(-1deg);  
     }
 }
 
 .ticket.active:hover{
-    -ms-transform: rotate(3deg); /* IE 9 */
-    -webkit-transform: rotate(3deg); /* Chrome, Safari, Opera */
-    transform: rotate(3deg);
+    -ms-transform: rotate(1deg); /* IE 9 */
+    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+    transform: rotate(1deg);
      -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
 }
@@ -178,4 +199,26 @@ h2 {
     -moz-border-radius: 20px 0 0 0;
     -webkit-border-radius: 20px 0 0 0;
     border-radius: 20px 0 0 0;
+}
+
+.sponsor{
+  figure{
+    &:nth-child(odd){
+      padding-left: 2em;
+      float: right;
+    }
+    &:nth-child(even){
+      padding-right: 2em;
+      float: left;
+    }
+    width: 33%;
+    img{
+      border: 3px solid white;
+      border-bottom-width: 15px;
+      box-shadow: 0px 0px 4px rgba(0,0,0,1);
+    }
+  figcaption{
+    font-style: italic;
+  }
+  }
 }
