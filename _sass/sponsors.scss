@@ -1,0 +1,62 @@
+#sponsors{
+  padding: 1em;
+  background: rgb(230,230,230);
+  width: 100%;
+  text-align: center;
+  .sp-intro{
+    color: black;
+    font-style: italic;
+  }
+  div {
+    padding: 1em;
+    padding-right: 8em;
+    .sp-level-name{
+      float: left;
+      width: 8em;
+      text-align:left;
+      display: block;
+      font-size: 80%;
+      font-variant: small-caps;
+    }
+    .sp-cta{
+      font-size: 80%;
+    }
+    border-bottom: 1px dashed rgba($ruby, 0.3);
+    .logo{
+      margin: 0.5em;
+    }
+    &.ruby {
+      .logo{ height: 2.5em}
+    }
+    &.unobtainium {
+      .logo{ height: 2em}
+    }
+    &.adamantium {
+      .logo{ height: 1.5em}
+    }
+    &.supporter {
+    }
+  }
+}
+
+.sponsor{
+  figure{
+    &:nth-child(odd){
+      padding-left: 2em;
+      float: right;
+    }
+    &:nth-child(even){
+      padding-right: 2em;
+      float: left;
+    }
+    width: 33%;
+    img{
+      border: 3px solid white;
+      border-bottom-width: 15px;
+      box-shadow: 0px 0px 4px rgba(0,0,0,1);
+    }
+  figcaption{
+    font-style: italic;
+  }
+  }
+}

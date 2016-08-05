@@ -10,3 +10,23 @@ defaults:
 sass:
   style: compressed
   # sass_dir: _sass # default _sass
+sponsor-levels:
+  - name: ruby
+    icon: heart
+    sponsors: []
+  - name: unobtainium
+    sponsors: []
+    icon: rocket
+  - name: adamantium
+    icon: diamond
+    sponsors:
+      - name: BeBanjo
+        icon: bebanjo.svg
+        url: http://bebanjo.com
+  - name: supporter
+    icon: thumbs-up
+    sponsors:
+      - name: ProRuby Team
+        url: http://www.prorubyteam.com
+      - name: Besepa
+        url: http://www.besepa.com

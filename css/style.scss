@@ -41,7 +41,7 @@ section{
 @import "cards";
 @import "footer";
 @import "tables";
-
+@import "sponsors";
 
 div#content{
   @include outer-container();
@@ -201,24 +201,4 @@ h2 {
     border-radius: 20px 0 0 0;
 }
 
-.sponsor{
-  figure{
-    &:nth-child(odd){
-      padding-left: 2em;
-      float: right;
-    }
-    &:nth-child(even){
-      padding-right: 2em;
-      float: left;
-    }
-    width: 33%;
-    img{
-      border: 3px solid white;
-      border-bottom-width: 15px;
-      box-shadow: 0px 0px 4px rgba(0,0,0,1);
-    }
-  figcaption{
-    font-style: italic;
-  }
-  }
-}
+
