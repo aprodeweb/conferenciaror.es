@@ -25,7 +25,7 @@ body {
   position: relative; /* enable footer positioning */
   margin: 0px;
   min-height: 100%; /* position footer at least on bottom of screen */
-  padding-bottom: 12em; /* safe space for footer */
+  padding-bottom: 5.35em; /* safe space for footer */
   /* texture */
   $texture-top-background: white;//lighten(#ddf0ef, 1%);
   $texture-bottom-background: white; //darken($ruby, 20%);
