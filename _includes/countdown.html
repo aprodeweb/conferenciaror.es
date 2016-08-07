@@ -26,7 +26,8 @@
 // https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/
 Countdown = (function(expose){
   var _endtime = null;
-  var display = {};
+  var _timeInterval = null;
+  var _clock = {};
 
   function getTimeRemaining(){
     var t = Date.parse(_endtime) - Date.parse(new Date());
@@ -43,36 +44,41 @@ Countdown = (function(expose){
     };
   }
 
+  function finishClock(){
+    clearInterval(_timeinterval);
+    expose.finished = true;
+    if (_hideable) {
+      el = document.getElementById(_hideable);
+      if (el){
+        el.style.display = 'none';
+      }
+    }
+  }
+
   function updateClock(){
     var t = getTimeRemaining();
-    display.days.innerHTML    = t.days;
-    display.hours.innerHTML   = t.hours;
-    display.minutes.innerHTML = t.minutes;
-    display.seconds.innerHTML = ('0' + t.seconds).slice(-2);
+    _clock.days.innerHTML    = t.days;
+    _clock.hours.innerHTML   = t.hours;
+    _clock.minutes.innerHTML = t.minutes;
+    _clock.seconds.innerHTML = ('0' + t.seconds).slice(-2);
     if(t.total <= 0){
-      clearInterval(timeinterval);
-      if (_hideable) {
-        el = document.getElementById(_hideable);
-        if (el){
-          el.style.display = 'none';
-        }
-      }
+      finishClock();
     }
   }
 
   expose.finished = false;
 
   expose.init = function(id, endtime, hideableId){
-    _endtime        = endtime;
-    _hideable       = hideableId;
-    var clock       = document.getElementById(id);
-    display.days    = clock.querySelector('.days');
-    display.hours   = clock.querySelector('.hours');
-    display.minutes = clock.querySelector('.minutes');
-    display.seconds = clock.querySelector('.seconds');
+    _endtime       = endtime;
+    _hideable      = hideableId;
+    var clock      = document.getElementById(id);
+    _clock.days    = clock.querySelector('.days');
+    _clock.hours   = clock.querySelector('.hours');
+    _clock.minutes = clock.querySelector('.minutes');
+    _clock.seconds = clock.querySelector('.seconds');
 
     updateClock(); // run function once at first to avoid delay
-    var timeinterval = setInterval(updateClock,1000);
+    _timeinterval = setInterval(updateClock,1000);
   }
 
   return expose;
