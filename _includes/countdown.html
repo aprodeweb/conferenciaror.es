@@ -59,7 +59,7 @@ Countdown = (function(expose){
     var t = getTimeRemaining();
     _clock.days.innerHTML    = t.days;
     _clock.hours.innerHTML   = t.hours;
-    _clock.minutes.innerHTML = t.minutes;
+    _clock.minutes.innerHTML = ('0' + t.minutes).slice(-2);
     _clock.seconds.innerHTML = ('0' + t.seconds).slice(-2);
     if(t.total <= 0){
       finishClock();
