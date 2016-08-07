@@ -1,5 +1,6 @@
 ---
 title: Get yours while they're hot
+deadline: 'August 7 2016 23:59:59 GMT+0200'
 ---
 <article>
   <h1>Get them while they're hot!</h1>
@@ -15,8 +16,10 @@ title: Get yours while they're hot
   <p>
   The <i>Early Birds</i> will be only on sale until <b>August the 7th</b> or until they go all away.
   </p>
+    {% include countdown.html deadline=page.deadline hideable='tickets-iframe' %}
 </article>
+
 <iframe src="https://conferenciaror.stagehq.com/events/3796/external"
   marginheight="5" marginwidth="5" frameborder="0" scrolling="auto"
-  height="250" width="500">
+  height="250" width="500" id='tickets-iframe'>
 </iframe>

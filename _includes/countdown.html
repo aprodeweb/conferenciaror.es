@@ -1,0 +1,83 @@
+<div id="countdown" title="you can cheat the clock, but not the seller">
+  <span class='segment'>Days:    <div class="days">   </div></span>
+  <span class='segment'>Hours:   <div class="hours">  </div></span>
+  <span class='segment'>Minutes: <div class="minutes"></div></span>
+  <span class='segment'>Seconds: <div class="seconds"></div></span>
+</div>
+
+<style type="text/css" media="all">
+  #countdown{
+    text-align: center;
+    margin: 1em;
+  }
+  #countdown .segment{
+    display: inline-block;
+    margin-right: 1em;
+  }
+  #countdown .segment div{
+    display: block;
+    font-size: 2em;
+    font-family: monospace;
+  }
+</style>
+
+<script>
+
+Countdown = (function(expose){
+  var _endtime = null;
+  var display = {};
+
+  function getTimeRemaining(){
+    var t = Date.parse(_endtime) - Date.parse(new Date());
+    var seconds = Math.floor( (t/1000) % 60 );
+    var minutes = Math.floor( (t/1000/60) % 60 );
+    var hours   = Math.floor( (t/(1000*60*60)) % 24 );
+    var days    = Math.floor( t/(1000*60*60*24) );
+    return {
+      'total': t,
+      'days': days,
+      'hours': hours,
+      'minutes': minutes,
+      'seconds': seconds
+    };
+  }
+
+  function updateClock(){
+    var t = getTimeRemaining();
+    display.days.innerHTML    = t.days;
+    display.hours.innerHTML   = t.hours;
+    display.minutes.innerHTML = t.minutes;
+    display.seconds.innerHTML = ('0' + t.seconds).slice(-2);
+    if(t.total <= 0){
+      clearInterval(timeinterval);
+      if (_hideable) {
+        el = document.getElementById(_hideable);
+        if (el){
+          el.style.display = 'none';
+        }
+      }
+    }
+  }
+
+  expose.finished = false;
+
+  expose.init = function(id, endtime, hideableId){
+    _endtime        = endtime;
+    _hideable       = hideableId;
+    var clock       = document.getElementById(id);
+    display.days    = clock.querySelector('.days');
+    display.hours   = clock.querySelector('.hours');
+    display.minutes = clock.querySelector('.minutes');
+    display.seconds = clock.querySelector('.seconds');
+
+    updateClock(); // run function once at first to avoid delay
+    var timeinterval = setInterval(updateClock,1000);
+  }
+
+  return expose;
+
+})(window.Countdown || {});
+
+Countdown.init('countdown', '{{ include.deadline }}', '{{include.hideable}}');
+
+</script>
