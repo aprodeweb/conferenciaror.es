@@ -1,0 +1,132 @@
+---
+title: near you
+days:
+  - date: October 13<sup>th</sup>
+    id: oct13
+    title: Worhshops
+    slots:
+      - title: Ruby Ruling 1
+        speaker: Jane Maker
+        rowspan: 2
+      -
+      - title: Ruby Ruling 2
+        speaker: Jane Maker
+        rowspan: 2
+      -
+      - title: LUNCH
+        class: lunch
+      - title: Ruby Ruling 3
+        speaker: Jane Maker
+        rowspan: 2
+      -
+      - title: ''
+      - title: ''
+  - date: October 14<sup>th</sup>
+    id: oct14
+    title: Talks
+    slots:
+      - title: '* Keynote *'
+        speaker: Speaker Name
+        class: keynote
+      - title: Talk 2
+        speaker: Speaker Name
+      - title: Talk 3
+        speaker: Speaker Name
+      - title: Talk 4
+        speaker: Speaker Name
+        is_keynote: false
+      - title: LUNCH
+        class: lunch
+      - title: Talk 5
+        speaker: Speaker Name
+      - title: Talk 6
+        speaker: Speaker Name
+      - title: Talk 7
+        speaker: Speaker Name
+      - title: '* Keynote *'
+        speaker: Speaker Name
+        class: keynote
+  - date: October 15<sup>th</sup>
+    id: oct15
+    title: Talks
+    slots:
+      - title: '* Keynote *'
+        speaker: Speaker Name
+        class: keynote
+      - title: Talk 10
+        speaker: Speaker Name
+      - title: Talk 11
+        speaker: Speaker Name
+      - title: Talk 12
+        speaker: Speaker Name
+      - title: LUNCH
+        class: lunch
+      - title: Talk 13
+        speaker: Speaker Name
+      - title: Talk 14
+        speaker: Speaker Name
+      - title: Talk 15
+        speaker: Speaker Name
+      - title: '* Keynote *'
+        speaker: Speaker Name
+        class: keynote
+
+
+---
+<h1>Conferencia Rails <em class='date'>Madrid, 13-15th October 2016</em></h1>
+
+<h2>Schedule</h2>
+
+<p>
+Conferencia Rails
+</p>
+
+<section id='schedule'>
+
+  <!-- desktop -->
+  <table class='table-wide'>
+    <tr> {% for day in page.days %} <td class='date'>{{ day.date }}</td> {% endfor %} </tr>
+    <tr> {% for day in page.days %} <th>{{ day.title }}</th> {% endfor %} </tr>
+    {% for i in (0..8) %}
+    <tr>
+      {% for day in page.days %}
+        {% if day.slots[i].title %}
+        <td rowspan='{{ day.slots[i].rowspan | default 1 }}' class='{{ day.slots[i].class}}'>
+          {{ day.slots[i].title }} <br> <i>{{day.slots[i].speaker}}</i>
+        </td>
+        {% endif %}
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+ <hr>
+  <!-- mobile -->
+  <table class='table-thin' id='{{ day.id }}'>
+    <tr>
+      {% for day in page.days %}
+      <td>
+        <a href='#{{day.id}}'>{{ day.date }}</a>
+      <td>
+      {% endfor %}
+    </tr>
+  </table>
+
+  {% for day in page.days %}
+  <table class='table-thin' id='{{ day.id }}'>
+    <tr><td class='date'>{{ day.date }}</td></tr>
+    <tr><th>{{ day.title }}</th></tr>
+    {% for slot in day.slots %}
+    <tr>
+      {% if slot.title %}
+      <td rowspan='{{ slot.rowspan | default 1 }}' class='{{ slot.class }}'>
+        {{ slot.title }} <br> <i>{{slot.speaker}}</i>
+      </td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+  </table>
+  {% endfor %}
+
+</section>
+
+

@@ -105,3 +105,14 @@
   }
 }
 
+table {
+   &.table-wide{
+     display: none;
+   }
+   &.table-thin{
+     display: table }
+   @include media($medium-screen) {
+   &.table-wide{ display: table }
+   &.table-thin{ display: none}
+   }
+}
