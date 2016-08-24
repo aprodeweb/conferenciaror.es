@@ -122,7 +122,12 @@ header.navigation {
       color: $navigation-color;
       display: inline-block;
       text-decoration: none;
-
+      sup {
+        color: white;
+        font-weight: bold;
+        transform: rotate(20deg) translateX(-8px);
+        display: inline-block;
+      }
       @include media ($horizontal-bar-mode) {
         padding-right: 1em;
       }
