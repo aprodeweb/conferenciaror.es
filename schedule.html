@@ -1,35 +1,61 @@
 ---
 title: near you
 days:
+  - date:
+    times: true
+    id: '#'
+    title: Time
+    slots:
+      - title: '08:30 - 09:30'
+      - title: '09:30 - 10:30'
+      - title: '10:30 - 11:15'
+      - title: '11:15 - 11:45'
+      - title: '11:45 - 12:30'
+      - title: '12:30 - 13:15'
+      - title: '13:15 - 15:00'
+      - title: '15:00 - 15:45'
+      - title: '15:45 - 16:30'
+      - title: '16:30 - 17:00'
+      - title: '17:00 - 17:45'
+      - title: '17:45 - 18:45'
+
   - date: October 13<sup>th</sup>
     id: oct13
-    title: Worhshops
+    title: Workshops
     slots:
-      - title: Ruby Ruling 1
-        speaker: Jane Maker
+      - title: ''
+      - title: Rspec for newbies
+        speaker: Fernando Blat
         rowspan: 2
       -
-      - title: Ruby Ruling 2
-        speaker: Jane Maker
+      - title: Break
+        class: lunch
+      - title: React on Rails workshop
+        speaker: Prathamesh Sonpatki
         rowspan: 2
       -
       - title: LUNCH
         class: lunch
-      - title: Ruby Ruling 3
-        speaker: Jane Maker
+      - title: 'Hack & meet'
+        speaker: 
         rowspan: 2
       -
       - title: ''
       - title: ''
+      - title: ''
   - date: October 14<sup>th</sup>
     id: oct14
-    title: Talks
+    title: Day 1
     slots:
+      - title: Registration
+        class: lunch
       - title: '* Opening *'
         speaker: Xavi Noria
         class: keynote
       - title: Upgrade strategies for Ruby and Rails
         speaker: Enrique Mogollan
+      - title: Break
+        class: lunch
       - title: Responsible gem collector
         speaker: Adam Niedzielski
       - title: Phoenix Framework for Rails devs
@@ -41,6 +67,8 @@ days:
         speaker: Fernando Blat
       - title: Secrets of testing Rails 5 apps
         speaker: Prathamesh Sonpatki
+      - title: Break
+        class: lunch
       - title: Understanding Unix pipes with Ruby
         speaker: Sergio Gil
       - title: '* Keynote *'
@@ -48,24 +76,30 @@ days:
         class: keynote
   - date: October 15<sup>th</sup>
     id: oct15
-    title: Talks
+    title: Day 2
     slots:
+      - title: Registration
+        class: lunch
       - title: '* Keynote *'
         speaker: Kerri Miller
         class: keynote
       - title: 20 tips to secure your Rails app
         speaker: Daniel Lobato Garcia
+      - title: Break
+        class: lunch
       - title: Tech work and mental health
         speaker: Diego Fernández Fernández
       - title: Bulk load data with Active Record and NoSQL
         speaker: Carlos Sánchez Pérez
       - title: LUNCH
         class: lunch
-      - title: Talk 13
-        speaker: Speaker Name
-      - title: Talk 14
-        speaker: Speaker Name
-      - title: Lightin Talks
+      - title: How we build an SPA with Rails API and React.js
+        speaker: Adam Pahlevi
+      - title: Semi-advanced PostgreSQL with rails
+        speaker: Enrique García Cota
+      - title: Break
+        class: lunch
+      - title: '<i class="fa fa-bolt" aria-hidden="true"></i> Lightning Talks <i class="fa fa-bolt" aria-hidden="true"></i>'
         speaker: Why not you?
       - title: '* Closing *'
         speaker: Aaron Patterson
@@ -78,7 +112,7 @@ days:
 <h2>Schedule</h2>
 
 <p>
-Conferencia Rails
+Conferencia Rails' provisional schedule, subject to changes
 </p>
 
 <section id='schedule'>
@@ -87,7 +121,7 @@ Conferencia Rails
   <table class='table-wide'>
     <tr> {% for day in page.days %} <td class='date'>{{ day.date }}</td> {% endfor %} </tr>
     <tr> {% for day in page.days %} <th>{{ day.title }}</th> {% endfor %} </tr>
-    {% for i in (0..8) %}
+    {% for i in (0..12) %}
     <tr>
       {% for day in page.days %}
         {% if day.slots[i].title %}
@@ -99,32 +133,39 @@ Conferencia Rails
     </tr>
     {% endfor %}
   </table>
- <hr>
+
+
   <!-- mobile -->
   <table class='table-thin' id='{{ day.id }}'>
     <tr>
       {% for day in page.days %}
+      {% if day.date %}
       <td>
-        <a href='#{{day.id}}'>{{ day.date }}</a>
+        <a href='#{{day.id}}'>{{ day.title }}</a>
       <td>
+      {% endif %}
       {% endfor %}
     </tr>
   </table>
 
   {% for day in page.days %}
-  <table class='table-thin' id='{{ day.id }}'>
-    <tr><td class='date'>{{ day.date }}</td></tr>
-    <tr><th>{{ day.title }}</th></tr>
-    {% for slot in day.slots %}
-    <tr>
-      {% if slot.title %}
-      <td rowspan='{{ slot.rowspan | default 1 }}' class='{{ slot.class }}'>
-        {{ slot.title }} <br> <i>{{slot.speaker}}</i>
-      </td>
-      {% endif %}
-    </tr>
-    {% endfor %}
-  </table>
+    {% if day.times != true %}
+    <table class='table-thin' id='{{ day.id }}'>
+      <tr><td class='date' colspan='2'>{{ day.date }}</td></tr>
+      <tr><th colspan='2'>{{ day.title }}</th></tr>
+      {% for i in (0..11) %}
+      {% assign slot = day.slots[i] %}
+      <tr>
+        <td> {{ page.days[0].slots[i].title }} </td>
+        {% if slot.title %}
+        <td rowspan='{{ slot.rowspan | default 1 }}' class='{{ slot.class }}'>
+          {{ slot.title }} <br> <i>{{slot.speaker}}</i>
+        </td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
   {% endfor %}
 
 </section>
