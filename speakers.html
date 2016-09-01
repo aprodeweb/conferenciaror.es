@@ -1,0 +1,125 @@
+---
+title: Talks
+talks:
+  - title: Rspec for newbies
+    speaker: Fernando Blat
+    type: workshop
+  - title: OPENING
+    speaker: Xavi Noria
+    type: keynote
+  - title: Upgrade strategies for Ruby and Rails
+    speaker: Enrique Mogollan
+  - title: Responsible gem collector
+    speaker: Adam Niedzielski
+  - title: Semi-advanced PostgreSQL with Ruby on Rails
+    speaker: Enrique García Cota
+  - title: "Ten years with Rails, wow's and meh's"
+    speaker: Fernando Blat
+  - title: Highly scalable storage with MySQL and Ruby
+    speaker: Olek Janiszewski
+  - title: Understanding Unix pipes with Ruby
+    speaker: Sergio Gil
+  - title: 'KEYNOTE'
+    speaker: Godfrey Chan
+    type: keynote
+  - title: KEYNOTE
+    speaker: Kerri Miller
+    type: keynote
+  - title: 20 tips to secure your Rails app
+    speaker: Daniel Lobato Garcia
+    avatar: http://www.gravatar.com/avatar/fe4dc5ea02ac73b9981bcc549a7a288c
+    abstract: |
+      Security is an afterthought for your app? You have a problem, but
+      after you review your application and apply all of the tips, attackers
+      will have it much harder than before.  We'll go over whitelisting vs
+      blacklisting, how just visiting a site can be a problem (CSRF), how
+      to deal with file uploads, security tokens and headers in your app,
+      cookie replays, and more countermeasures to popular attacks.  CSRF,
+      XSS, CVE sound like Star Wars' ships to you? Come to this talk and
+      leave with a lot of ideas to start securing your Rails app."
+  - title: Secrets of testing Rails 5 apps
+    speaker: Prathamesh Sonpatki
+    avatar: http://www.gravatar.com/avatar/1b0973b64704738dbc8ce24d8382bb1f
+    abstract: |
+      Testing Rails 5 apps has become better experience out of the box.
+      Rails has also become smarter by introducing the test runner.
+      Now we can't complain that about not able to run a single test or not
+      getting coloured output. A lot of effort gone into making tests
+      especially integration tests run faster. The overall testing strategy is
+      also moving from focussing testing internals to testing explicit parts of
+      the whole system. Come and join me as we will commence the journey to
+      uncover the secrets of testing Rails 5 apps.
+    bio: |
+      Prathamesh is Director at BigBinary based out of India. He builds web
+      apps using Rails and React.js!. He is interested in open source and
+      contribute to many Ruby and Rails related projects. He likes Emacs
+      operating system a lot and can be found constantly tweaking his .emacs.d
+    workshop:
+      title: React on Rails workshop
+      abstract: |
+        In this workshop, we will learn about ReactJS and using ReactJS with a
+        Ruby on Rails.
+        We will be building an app with React and Rails to learn about React as 
+        well as how to integrate it effectively with Rails. We will cover React
+        basics - components, states and props - related to data flow. We will
+        also look at setting up a React on Rails app. After that we will
+        discuss rendering model of React components and various component
+        lifecycle methods. We will also take a look at how to do server side
+        rendering using React.
+        At the end of the workshop, the attendees will get understanding of
+        basics of React and how to integrate it with Rails. They will also have
+        a working example of such app to continue learning further.
+        For attending the workshop, familarity with Rails is expected. No prior
+        knoweldge of React is required. Attendees are expected to bring laptops
+        setup with Rails. We will send setup instructions before the workshop
+        if required.
+  - title: Bulk load data with ActiveRecord and NoSQL
+    speaker: Carlos Sánchez Pérez
+  - title: How we build an SPA with Rails API and React.js
+    speaker: Adam Pahlevi
+  - title: Phoenix Framework for Rails devs
+    speaker: Javier Cuevas
+  - title: Tech work and mental health
+    speaker: Diego Fernández Fernández
+    avatar: https://pbs.twimg.com/profile_images/678550570404339712/1rRIJV1f.jpg
+    abstract: |
+      It's easy to find information, more or less accurate, about the physical
+      toll that tech workers get from the kind of job we do and also how to
+      avoid or mitigate some of the risks we get exposed too. But what about
+      the mind?
+      The purpose of this talk it's to point out the importance of mental
+      health in our environment. We will try to answer questions about what are
+      the risks we're exposed to and how to deal with them.
+  - title: CLOSING
+    speaker: Aaron Patterson
+    type: keynote
+
+---
+<h1>Conferencia Rails <em class='date'>Madrid, 13-15th October 2016</em></h1>
+
+<h2>Speakers</h2>
+{% assign sorted_talks = page.talks | sort: 'speaker' %}
+<div id='speakers'>
+{% for talk in sorted_talks %}
+  {% if talk.abstract %}
+  <article class='talk'>
+    {% if talk.avatar %}
+      <div class='talk-image'>
+      <img src='{{ talk.avatar }}'>
+      </div>
+    {% endif %}
+    <div class='talk-content'>
+    <h1>{{ talk.speaker }}</h1>
+    <p class='talk-detail'>{{ talk.title }}</p>
+    <p>{{ talk.abstract }}</p>
+    {% if talk.workshop %}
+      <section class='workshop'>
+        <p class='workshop-label'>Workshop:</p>
+        <p class='talk-detail'>{{ talk.workshop.title }}</p>
+        <p>{{ talk.workshop.abstract }}</p>
+      </section>
+    {% endif %}
+  </article>
+  {% endif %}
+{% endfor %}
+</div>

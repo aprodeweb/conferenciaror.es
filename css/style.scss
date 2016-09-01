@@ -222,3 +222,77 @@ h2 {
     }
   }
 }
+
+#speakers{
+.talk {
+  $base-border-radius: 6px !default;
+  $base-spacing: 1.5em !default;
+  $action-color: $ruby !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  $talk-gutter: 1.4em;
+  $talk-image-padding: 0.2em;
+  $talk-image-width: 6em;
+  $talk-color: $base-font-color;
+  $talk-background: lighten($action-color, 15%);
+  $talk-detail-color: transparentize($talk-color, 0.5);
+  $talk-image-vert-alignment: top;
+
+  border-bottom: 1px solid transparentize($talk-color, 0.9);
+  display: table;
+  margin-bottom: $base-spacing;
+  padding-bottom: 1em;
+  width: 100%;
+
+  .talk-image,
+  .talk-content {
+    display: table-cell;
+    vertical-align: $talk-image-vert-alignment;
+  }
+
+  .talk-image {
+    padding-right: $talk-gutter;
+
+    > img {
+      /*background: $talk-background;*/
+      border-radius: $base-border-radius * 24;
+      display: block;
+      height: auto;
+      max-width: none;
+      padding: $talk-image-padding;
+      width: $talk-image-width;
+      box-shadow: 0px 0px 3px #000;
+    }
+
+    .talk-reverse-order & {
+      padding-left: 10px;
+      padding-right: 0;
+    }
+  }
+
+  .talk-content {
+    width: 100%;
+
+    h1 {
+      font-size: 1em;
+      margin: 0 0 0.5em 0;
+    }
+
+    p {
+      line-height: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    p.talk-detail {
+      color: $talk-detail-color;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+    section.workshop{
+      p.workshop-label{
+        font-variant: small-caps;
+      }
+    }
+  }
+}
+}

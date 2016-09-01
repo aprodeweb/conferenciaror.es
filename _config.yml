@@ -23,6 +23,9 @@ sponsor-levels:
       - name: BeBanjo
         icon: bebanjo.svg
         url: http://bebanjo.com
+      - name: FlyWire
+        icon: flywire.png
+        url: https://flywire.com
   - name: supporter
     icon: thumbs-up
     sponsors:
