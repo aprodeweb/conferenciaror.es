@@ -27,12 +27,14 @@ days:
       - title: Rspec for newbies
         speaker: Fernando Blat
         rowspan: 2
+        talk: ferblape
       -
       - title: Break
         class: lunch
       - title: React on Rails workshop
         speaker: Prathamesh Sonpatki
         rowspan: 2
+        talk: _cha1tanya
       -
       - title: LUNCH
         class: lunch
@@ -52,27 +54,35 @@ days:
       - title: OPENING
         speaker: Xavi Noria
         class: keynote
+        talk: fxn
       - title: Upgrade strategies<br>for Ruby and Rails
         speaker: Enrique Mogollan
+        talk: mogox
       - title: Break
         class: lunch
       - title: Responsible gem collector
         speaker: Adam Niedzielski
+        talk: niedzielskiadam
       - title: Semi-advanced PostgreSQL<br>with Ruby on Rails
         speaker: Enrique García Cota
+        talk: otikik
       - title: LUNCH
         class: lunch
       - title: "Ten years with Rails,<br>wow's and meh's"
         speaker: Fernando Blat
+        talk: ferblape
       - title: Highly scalable storage with MySQL and Ruby
         speaker: Olek Janiszewski
+        talk: exviva
       - title: Break
         class: lunch
       - title: Understanding Unix pipes<br>with Ruby
         speaker: Sergio Gil
+        talk: porras
       - title: 'KEYNOTE'
         speaker: Godfrey Chan
         class: keynote
+        talk: chancancode
   - date: Saturday 15<sup>th</sup>
     id: oct15
     title: Day 2
@@ -82,27 +92,35 @@ days:
       - title: KEYNOTE
         speaker: Kerri Miller
         class: keynote
+        talk: kerrizor
       - title: 20 tips to secure your Rails app
         speaker: Daniel Lobato Garcia
+        talk: dLobatog
       - title: Break
         class: lunch
       - title: Secrets of testing Rails 5 apps
         speaker: Prathamesh Sonpatki
+        talk: _cha1tanya
       - title: Bulk load data with<br>ActiveRecord and NoSQL
         speaker: Carlos Sánchez Pérez
+        talk: carlossanchezp
       - title: LUNCH
         class: lunch
       - title: How we build an SPA<br>with Rails API and React.js
         speaker: Adam Pahlevi
+        talk: adamvim
       - title: Phoenix Framework<br>for Rails devs
         speaker: Javier Cuevas
+        talk: javier_dev
       - title: Break
         class: lunch
       - title: Tech work and mental health
         speaker: Diego Fernández Fernández
+        talk: littlemove
       - title: CLOSING
         speaker: Aaron Patterson
         class: keynote
+        talk: tenderlove
 
 
 ---
@@ -125,7 +143,8 @@ Conferencia Rails' provisional schedule, subject to changes
       {% for day in page.days %}
         {% if day.slots[i].title %}
         <td rowspan='{{ day.slots[i].rowspan | default 1 }}' class='{{ day.slots[i].class}}'>
-          {{ day.slots[i].title }} <br> <i>{{day.slots[i].speaker}}</i>
+          <a href="/speakers.html#{{ day.slots[i].talk }}">{{ day.slots[i].title }}</a>
+          <br> <i>{{day.slots[i].speaker}}</i>
         </td>
         {% endif %}
       {% endfor %}
@@ -158,7 +177,8 @@ Conferencia Rails' provisional schedule, subject to changes
         <td> {{ page.days[0].slots[i].title }} </td>
         {% if slot.title %}
         <td rowspan='{{ slot.rowspan | default 1 }}' class='{{ slot.class }}'>
-          {{ slot.title }} <br> <i>{{slot.speaker}}</i>
+          <a href="/speakers.html#{{ slot.talk }}">{{ slot.title }}</a>
+          <br> <i>{{slot.speaker}}</i>
         </td>
         {% endif %}
       </tr>

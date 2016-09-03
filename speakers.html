@@ -207,7 +207,7 @@ talks:
 <div id='speakers'>
 {% for talk in sorted_talks %}
   {% if talk.abstract %}
-  <article class='talk'>
+  <article class='talk' id="{{talk.twitter}}">
     {% if talk.avatar %}
       <div class='talk-image'>
         <img src='{{ talk.avatar }}'>
