@@ -143,8 +143,14 @@ Conferencia Rails' provisional schedule, subject to changes
       {% for day in page.days %}
         {% if day.slots[i].title %}
         <td rowspan='{{ day.slots[i].rowspan | default 1 }}' class='{{ day.slots[i].class}}'>
-          <a href="/speakers.html#{{ day.slots[i].talk }}">{{ day.slots[i].title }}</a>
-          <br> <i>{{day.slots[i].speaker}}</i>
+          {% if day.slots[i].speaker %}
+            <a href="/speakers.html#{{ day.slots[i].talk }}">
+              {{ day.slots[i].title }}
+              <br> <i class="schedule-speaker">{{day.slots[i].speaker}}</i>
+            </a>
+          {% else %}
+            {{ day.slots[i].title }}
+          {% endif %}
         </td>
         {% endif %}
       {% endfor %}
@@ -177,8 +183,14 @@ Conferencia Rails' provisional schedule, subject to changes
         <td> {{ page.days[0].slots[i].title }} </td>
         {% if slot.title %}
         <td rowspan='{{ slot.rowspan | default 1 }}' class='{{ slot.class }}'>
-          <a href="/speakers.html#{{ slot.talk }}">{{ slot.title }}</a>
-          <br> <i>{{slot.speaker}}</i>
+          {% if day.slots[i].speaker %}
+            <a href="/speakers.html#{{ day.slots[i].talk }}">
+              {{ day.slots[i].title }}
+              <br> <i class="schedule-speaker">{{day.slots[i].speaker}}</i>
+            </a>
+          {% else %}
+            {{ day.slots[i].title }}
+          {% endif %}
         </td>
         {% endif %}
       </tr>
