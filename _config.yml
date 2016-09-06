@@ -29,6 +29,9 @@ sponsor-levels:
       - name: Besepa
         url: http://www.besepa.com
         icon: besepa.svg
+      - name: Platform161
+        url: http://platform161.com/
+        icon: platform161.svg
   - name: supporter
     icon: thumbs-up
     sponsors:
