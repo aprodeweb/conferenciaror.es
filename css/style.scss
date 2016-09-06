@@ -211,13 +211,16 @@ h2 {
       }
       &.lunch{
         background-color: $light-gray;
-        color: $ruby;
+        color: gray;
       }
       &.date{
         background-color: $ruby;
         color: white;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         font-weight: bold;
+      }
+      .schedule-speaker{
+        color: black;
       }
     }
   }
@@ -267,6 +270,14 @@ h2 {
     .talk-reverse-order & {
       padding-left: 10px;
       padding-right: 0;
+    }
+  }
+
+  .talk-speaker-twitter{
+    padding-top: 10px;
+    text-align: center;
+    a {
+      color: #1da1f3;
     }
   }
 
