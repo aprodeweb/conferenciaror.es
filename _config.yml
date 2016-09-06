@@ -26,10 +26,11 @@ sponsor-levels:
       - name: FlyWire
         icon: flywire.png
         url: https://flywire.com
+      - name: Besepa
+        url: http://www.besepa.com
+        icon: besepa.svg
   - name: supporter
     icon: thumbs-up
     sponsors:
       - name: ProRuby Team
         url: http://www.prorubyteam.com
-      - name: Besepa
-        url: http://www.besepa.com
