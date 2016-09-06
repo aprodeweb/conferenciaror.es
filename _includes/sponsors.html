@@ -11,13 +11,10 @@
     {% if level.sponsors.size > 0 %}
       {% for sponsor in level.sponsors %}
         {% if sponsor.icon %}
-          <a href='{{sponsor.url}}' target='_blank'>
-            <img class='logo' src='img/{{sponsor.icon}}' title='{{sponsor.name}}'>
-          </a>
+        <a href='{{sponsor.url}}' target='_blank'>
+        <img class='logo' alt="{{sponsor.name}}'s logo" src='img/{{sponsor.icon}}' title='{{sponsor.name}}'></a>
         {% else %}
-        <span>[
-          <a href='{{sponsor.url}}' target='_blank'>{{sponsor.name}}</a>
-        ]</span>
+          <span>[ <a href='{{sponsor.url}}' target='_blank'>{{sponsor.name}}</a> ]</span>
         {% endif %}
       {% endfor %}
     {% else %}
