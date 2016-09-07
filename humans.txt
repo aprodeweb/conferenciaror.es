@@ -5,21 +5,21 @@
 	Twitter: @bertocq
 	From: Madrid, Madrid, Spain
 
-	Volunteer: Rocio Fernandez
+	Volunteer: Rocío Fernández
 	Contact: http://rocio.me/
 	Twitter: @ro_coder
 	From: Madrid, Madrid, Spain
-	
+
 	Volunteer: Alejandra Goicoechea
 	Contact: https://github.com/AleGoiko
 	Twitter: @rocknrollesque
 	From: Madrid, Madrid, Spain
-	
-	Volunteer: Fernando Martinez
+
+	Volunteer: Fernando Martínez
 	Contact: http://www.oinak.com/
 	Twitter: @oinak
 	From: Madrid, Madrid, Spain
 
 /* SITE */
 	Last update:2016/09/09
-	Language: English 
+	Language: English
