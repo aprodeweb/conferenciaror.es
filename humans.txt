@@ -3,25 +3,22 @@
 	Volunteer: Alberto Calderón
 	Contact: http://bertocq.es
 	Twitter: @bertocq
-	From:Madrid, Madrid, Spain
+	From: Madrid, Madrid, Spain
 
 	Volunteer: Rocio Fernandez
 	Contact: http://rocio.me/
 	Twitter: @ro_coder
-	From:Madrid, Madrid, Spain
+	From: Madrid, Madrid, Spain
 	
 	Volunteer: Alejandra Goicoechea
 	Contact: https://github.com/AleGoiko
 	Twitter: @rocknrollesque
-	From:Madrid, Madrid, Spain
+	From: Madrid, Madrid, Spain
 	
 	Volunteer: Fernando Martinez
 	Contact: http://www.oinak.com/
 	Twitter: @oinak
-	From:Madrid, Madrid, Spain
-
-
-		
+	From: Madrid, Madrid, Spain
 
 /* SITE */
 	Last update:2016/09/09
