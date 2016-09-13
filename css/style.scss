@@ -68,6 +68,27 @@ h1 {
 h2 {
   margin-top: 2em;
 }
+#logo{
+  float:left;
+  height:2em;
+  margin-right:.5em;
+  transform: rotate(-5deg);
+  transform-origin: center top;
+}
+#logo:hover{
+  animation: 3s ease 0s normal none infinite swing;
+}
+@-moz-keyframes swing {
+  0%  { -moz-transform: rotate(-5deg); }
+  50% { -moz-transform: rotate(5deg);}
+  100%{ -moz-transform: rotate(-5deg); }
+}
+@keyframes swing {
+  0%  { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg);}
+  100%{ transform: rotate(-5deg); }
+}
+
 .cards{
   @include media($medium-screen){ width: 66%; } /* avoid 3+1 */
   margin: auto;
