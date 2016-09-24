@@ -237,6 +237,9 @@ talks:
   <article class='talk' id="{{talk.twitter}}">
     {% if talk.avatar %}
       <div class='talk-image'>
+        {% if talk.type == 'keynote' %}
+          <i class='fa fa-star fa-spin'></i>
+        {% endif %}
         <img src='{{ talk.avatar }}'>
         <div class='talk-speaker-twitter'>
           <a href="https://twitter.com/{{talk.twitter}}">

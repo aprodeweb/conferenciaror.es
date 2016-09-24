@@ -275,8 +275,22 @@ h2 {
   }
 
   .talk-image {
+    position: relative;
     padding-right: $talk-gutter;
 
+    i.fa-star{
+      font-size: x-large;
+      display:block;
+      position: relative;
+      top: 1em;
+      left: 3em;
+      color: yellow;
+      text-shadow: 0px 0px 4px #000;
+      width: 1em;
+      &.fa-spin{
+        animation-duration: 10s;
+      }
+    }
     > img {
       /*background: $talk-background;*/
       border-radius: $base-border-radius * 24;
