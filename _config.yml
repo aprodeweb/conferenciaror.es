@@ -42,3 +42,5 @@ sponsor-levels:
         url: http://www.prorubyteam.com
       - name: RubyGarage
         url: https://rubygarage.org/
+      - name: AppSignal
+        url: https://appsignal.com/
