@@ -34,7 +34,7 @@ sponsor-levels:
         icon: platform161.svg
       - name: ASPgems
         url: https://aspgems.com
-        icon: aspgems.png
+        icon: aspgems.svg
   - name: supporter
     icon: thumbs-up
     sponsors:
