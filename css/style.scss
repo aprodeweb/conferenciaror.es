@@ -3,12 +3,15 @@
 /* all css */
 
 $ruby: #9C1936;
+$small-screen: 26em !default;
 $medium-screen: 40em !default;
 $large-screen: 53.75em !default;
 
 @import "bourbon/bourbon";  /* reset format */
 @import "base/base";  /* reset format */
 @import "neat/neat";  /* reset format */
+
+$mobile: new-breakpoint(max-width $large-screen);
 
 html {
   height: 100%;
@@ -36,12 +39,12 @@ section{
   @include clearfix;
 }
 
-/* navigation */
 @import "navigation";
 @import "cards";
 @import "footer";
 @import "tables";
 @import "sponsors";
+@import "venue";
 
 div#content{
   @include outer-container();

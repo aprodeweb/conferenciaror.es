@@ -1,0 +1,25 @@
+#venue{
+  div {
+   min-height: 300px;
+   &:first-child{
+     border-bottom: 1px dashed grey;
+   }
+   @include span-columns(6);
+   @include media($mobile){ @include span-columns(12); }
+  }
+  #moby-logo {
+    height: 4em;
+    padding: .5em;
+    background-color: #000;
+    border-radius: .5em;
+    margin: 1em auto;
+  }
+  iframe {
+    border: 0;
+    width: 90%;
+    height: 300px;
+    //float: right;
+    margin: 1em auto;
+    border-radius: .5em;
+  }
+}
