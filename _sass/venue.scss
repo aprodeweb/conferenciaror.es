@@ -4,8 +4,8 @@
    &:first-child{
      border-bottom: 1px dashed grey;
    }
-   @include span-columns(6);
-   @include media($mobile){ @include span-columns(12); }
+   @include span-columns(12);
+   @include media($tablet-and-up){ @include span-columns(6); }
   }
   #moby-logo {
     height: 4em;

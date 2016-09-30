@@ -11,7 +11,8 @@ $large-screen: 53.75em !default;
 @import "base/base";  /* reset format */
 @import "neat/neat";  /* reset format */
 
-$mobile: new-breakpoint(max-width $large-screen);
+$mobile-and-up: new-breakpoint(min-width $medium-screen);
+$tablet-and-up: new-breakpoint(min-width $large-screen);
 
 html {
   height: 100%;
