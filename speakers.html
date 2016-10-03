@@ -38,14 +38,15 @@ talks:
       some non-standard changes. In this talk I will show you how to select
       gems for a long term perspective - as if you were to support your
       application for the next 5 years.
-  - title: Semi-advanced PostgreSQL with Ruby on Rails
-    speaker: Enrique García Cota
-    avatar: https://pbs.twimg.com/profile_images/1163890262/super_400x400.png
-    twitter: otikik
+  - title: Surprise Talk
+    speaker: Mystery Guest
+    avatar: /img/mystery.png
+    twitter: mystery
     abstract: |
-      PostgreSQL is an awesome piece of tech. So is rails. However, when used
-      in combination, there is a lot of cool functionality left out. We'll
-      see how to activate some of it without too much effort.
+      Due to unforeseen circumstances, our dear
+      <a href='https://twitter.com/otikik'>@otikik</a>
+      won't be able to join us for the conference so we decided to fill the
+      gap with mystery and glamour...
   - title: Ten years with Rails, wow's and meh's
     speaker: Fernando Blat
     avatar: http://www.gravatar.com/avatar/89e7c8b162c71e9905fbfe7d2ec376dc
@@ -241,11 +242,13 @@ talks:
           <i class='fa fa-star fa-spin'></i>
         {% endif %}
         <img src='{{ talk.avatar }}'>
+        {% if talk.twitter != 'mystery' %}
         <div class='talk-speaker-twitter'>
           <a href="https://twitter.com/{{talk.twitter}}">
             <img src="/img/twitter_ico.png">
           </a>
         </div>
+        {% endif %}
       </div>
     {% endif %}
     <div class='talk-content'>
