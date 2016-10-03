@@ -15,7 +15,10 @@ sponsor-levels:
     icon: heart
     sponsors: []
   - name: unobtainium
-    sponsors: []
+    sponsors:
+      - name: Cabify
+        icon: cabify.png
+        url: https://cabify.com/
     icon: rocket
   - name: adamantium
     icon: diamond
@@ -44,3 +47,7 @@ sponsor-levels:
         url: https://rubygarage.org/
       - name: AppSignal
         url: https://appsignal.com/
+      - name: Quaderno
+        url: https://www.quaderno.io/
+      - name: We Are People
+        url: https://wearepeople.io
