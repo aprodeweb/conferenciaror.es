@@ -17,7 +17,7 @@ sponsor-levels:
   - name: unobtainium
     sponsors:
       - name: Cabify
-        icon: cabify.png
+        icon: cabify.svg
         url: https://cabify.com/
     icon: rocket
   - name: adamantium
