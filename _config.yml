@@ -38,6 +38,12 @@ sponsor-levels:
       - name: ASPgems
         url: https://aspgems.com
         icon: aspgems.svg
+  - name: breakfast
+    icon: coffee
+    sponsors:
+      - name: Github
+        icon: github.svg
+        url: https://github.com
   - name: supporter
     icon: thumbs-up
     sponsors:
