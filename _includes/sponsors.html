@@ -1,14 +1,17 @@
 <div id='sponsors'>
   <p class='sp-intro'>
   All this awesomeness is <b>powered</b> by our amazing sponsors.
+  <a class='sp-cta' href='sponsor.pdf' target='_blank'>
+    Do you want to be here?
+  </a>
   </p>
   {% for level in site.sponsor-levels %}
+    {% if level.sponsors.size > 0 %}
     <div class='{{ level.name }}'>
       <span class='sp-level-name'>
       <i class='fa fa-{{level.icon}}'></i>
         {{ level.name | capitalize }}
       </span>
-    {% if level.sponsors.size > 0 %}
       {% for sponsor in level.sponsors %}
         {% if sponsor.icon %}
         <a href='{{sponsor.url}}' target='_blank'>
@@ -17,11 +20,8 @@
           <span>[ <a href='{{sponsor.url}}' target='_blank'>{{sponsor.name}}</a> ]</span>
         {% endif %}
       {% endfor %}
-    {% else %}
-        <a class='sp-cta' href='sponsor.pdf' target='_blank'>
-        Do you want to be here?
-        </a>
-    {% endif %}
     </div>
+    {% else %}
+    {% endif %}
   {% endfor %}
 </div>

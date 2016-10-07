@@ -17,7 +17,7 @@ sponsor-levels:
   - name: unobtainium
     sponsors:
       - name: Cabify
-        icon: cabify.png
+        icon: cabify.svg
         url: https://cabify.com/
     icon: rocket
   - name: adamantium
@@ -38,6 +38,12 @@ sponsor-levels:
       - name: ASPgems
         url: https://aspgems.com
         icon: aspgems.svg
+  - name: breakfast
+    icon: coffee
+    sponsors:
+      - name: Github
+        icon: github.svg
+        url: https://github.com
   - name: supporter
     icon: thumbs-up
     sponsors:
@@ -51,3 +57,5 @@ sponsor-levels:
         url: https://www.quaderno.io/
       - name: We Are People
         url: https://wearepeople.io
+      - name: AcidTango
+        url: http://www.acidtango.com/
