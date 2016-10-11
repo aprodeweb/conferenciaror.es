@@ -18,6 +18,8 @@ days:
       - title: '16:30 - 17:00'
       - title: '17:00 - 17:45'
       - title: '17:45 - 18:45'
+      - title: ''
+      - title: '20:00 - 23:30'
 
   - date: Thursday 13<sup>th</sup>
     id: oct13
@@ -42,6 +44,8 @@ days:
         speaker: 
         rowspan: 2
       -
+      - title: ''
+      - title: ''
       - title: ''
       - title: ''
       - title: ''
@@ -83,6 +87,10 @@ days:
         speaker: Godfrey Chan
         class: keynote
         talk: chancancode
+      - title: ''
+      - title: Dinner &amp; Party
+        class: lunch
+        party: true
   - date: Saturday 15<sup>th</sup>
     id: oct15
     title: Day 2
@@ -121,6 +129,8 @@ days:
         speaker: Aaron Patterson
         class: keynote
         talk: tenderlove
+      - title: ''
+      - title: ''
 
 
 ---
@@ -138,7 +148,7 @@ Conferencia Rails' provisional schedule, subject to changes
   <table class='table-wide'>
     <tr> {% for day in page.days %} <td class='date'>{{ day.date }}</td> {% endfor %} </tr>
     <tr> {% for day in page.days %} <th>{{ day.title }}</th> {% endfor %} </tr>
-    {% for i in (0..12) %}
+    {% for i in (0..14) %}
     <tr>
       {% for day in page.days %}
         {% if day.slots[i].title %}
@@ -149,7 +159,16 @@ Conferencia Rails' provisional schedule, subject to changes
               <br> <i class="schedule-speaker">{{day.slots[i].speaker}}</i>
             </a>
           {% else %}
-            {{ day.slots[i].title }}
+            {% if day.slots[i].party %}
+              <a href="/index.html#dinner">
+                <i class="fa fa-cutlery"></i>
+                {{ day.slots[i].title }}
+                <i class="fa fa-music"></i>
+                <br> at Moby Dick Club</i>
+              </a>
+            {% else %}
+              {{ day.slots[i].title }}
+            {% endif %}
           {% endif %}
         </td>
         {% endif %}
@@ -177,7 +196,7 @@ Conferencia Rails' provisional schedule, subject to changes
     <table class='table-thin' id='{{ day.id }}'>
       <tr><td class='date' colspan='2'>{{ day.date }}</td></tr>
       <tr><th colspan='2'>{{ day.title }}</th></tr>
-      {% for i in (0..11) %}
+      {% for i in (0..14) %}
       {% assign slot = day.slots[i] %}
       <tr>
         <td> {{ page.days[0].slots[i].title }} </td>
@@ -189,7 +208,16 @@ Conferencia Rails' provisional schedule, subject to changes
               <br> <i class="schedule-speaker">{{day.slots[i].speaker}}</i>
             </a>
           {% else %}
-            {{ day.slots[i].title }}
+            {% if day.slots[i].party %}
+              <a href="/index.html#dinner">
+                <i class="fa fa-cutlery"></i>
+                {{ day.slots[i].title }}
+                <i class="fa fa-music"></i>
+                <br> at Moby Dick Club</i>
+              </a>
+            {% else %}
+              {{ day.slots[i].title }}
+            {% endif %}
           {% endif %}
         </td>
         {% endif %}
