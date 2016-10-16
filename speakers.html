@@ -16,6 +16,7 @@ talks:
     speaker: Enrique Mogollan
     avatar: http://www.gravatar.com/avatar/13568f12c4de3b682b505822cc180458
     twitter: mogox
+    slides: https://speakerdeck.com/mogox/upgrade-strategies-for-ruby-and-rails
     abstract: |
       Are you running Rails 5 already? How about ruby 2.3.X?  I've been
       upgrading apps since Ruby 1.87 and Rails 2 and it's fun but there are
@@ -47,10 +48,33 @@ talks:
       give the mic to anyone that has a story to tell or a message to give in 4
       minutes or less, so be ready, you will have chance to get in line for it
       at the event, and the crowd will be yours... briefly
+      <p>
+      Are you missing here? <a href="mailto:team@conferenciaror.es">write us!</a>
+      </p>
+      <ol>
+      <!--
+      <li>
+        <b><a href="twitter.dom/"></a></b>
+        <em></em>
+        <a href=""> slides </a>
+      </li>
+      -->
+      <li>
+        <b><a href="twitter.com/eparreno">Emili Parreño</a></b>
+        <em>Microservices</em>
+        <!--<a href=""> slides </a>-->
+      </li>
+      <li>
+        <b><a href="twitter.com/colgado_es">Nando</a></b>
+        <em>NOT-SO-LIGHTNING TALK</em>
+        (<a href="https://github.com/the-cocktail/tck-lambdas">slides</a>)
+      </li>
+      </ol>
   - title: Ten years with Rails, wow's and meh's
     speaker: Fernando Blat
     avatar: http://www.gravatar.com/avatar/89e7c8b162c71e9905fbfe7d2ec376dc
     twitter: ferblape
+    slides: https://dl.dropboxusercontent.com/u/659167/12%20years%20rails.pdf
     abstract: |
       Many of us have growth as web developers using Ruby on Rails, taking
       advantage of the good practices and patterns that it introduced so
@@ -69,6 +93,7 @@ talks:
     speaker: Olek Janiszewski
     avatar: http://www.gravatar.com/avatar/70ce3eb95ce56c85b6da5bcfe7ce6b10
     twitter: exviva
+    slides: https://docs.google.com/presentation/d/170jTnsZv3VCMtmnvU81FPuNtQ7uST5UJAtvzhJIsf_4
     abstract: |
       At HotelTonight, we're handling millions of price and availability
       updates from thousands of hotels per month. See how we've developed a
@@ -130,6 +155,7 @@ talks:
     speaker: Prathamesh Sonpatki
     avatar: http://www.gravatar.com/avatar/1b0973b64704738dbc8ce24d8382bb1f
     twitter: _cha1tanya
+    slides: https://speakerdeck.com/chaitanya/rails-5-testing-presentation-given-at-conferencia-rails
     abstract: |
       Testing Rails 5 apps has become better experience out of the box.
       Rails has also become smarter by introducing the test runner.
@@ -167,6 +193,7 @@ talks:
     speaker: Carlos Sánchez Pérez
     avatar: http://www.gravatar.com/avatar/687f7d738303adc69c96a69b6b02a2e6 
     twitter: carlossanchezp
+    slides: http://slides.com/carlossanchezperez/deck-3#/
     abstract: |
       In this talk I want to explain my experience in the bulk load data on
       different projects with Active Record and NoSQL. I will try to speak
@@ -194,6 +221,7 @@ talks:
     speaker: Javier Cuevas
     avatar: http://www.gravatar.com/avatar/6b4a126e8934bcc21bd3bbf42b331c63
     twitter: javier_dev
+    slides: http://www.slideshare.net/Diacode/phoenix-for-rails-devs
     abstract: |
       Phoenix Framework is a web framework for Elixir, a functional programming
       language created by José Valim (ex Rails core team) that runs on the
@@ -205,6 +233,7 @@ talks:
     speaker: Diego Fernández Fernández
     avatar: https://pbs.twimg.com/profile_images/678550570404339712/1rRIJV1f.jpg
     twitter: littlemove
+    slides: https://drive.google.com/file/d/0B75rRqqhROgbcW1xbmVobl94LVE/view
     abstract: |
       It's easy to find information, more or less accurate, about the physical
       toll that tech workers get from the kind of job we do and also how to
@@ -255,6 +284,9 @@ talks:
     <h1>{{ talk.speaker }}</h1>
     <p class='talk-detail'>{{ talk.title }}</p>
     <p>{{ talk.abstract }}</p>
+    {% if talk.slides %}
+      <a href="{{talk.slides}}">check the slides</a>
+    {% endif %}
     {% if talk.workshop %}
       <section class='workshop'>
         <p class='workshop-label'>Workshop:</p>

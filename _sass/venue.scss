@@ -1,9 +1,7 @@
 #venue{
   div {
-   min-height: 300px;
-   &:first-child{
-     border-bottom: 1px dashed grey;
-   }
+   //min-height: 300px;
+   //&:first-child{ border-bottom: 1px dashed grey; }
    @include span-columns(12);
    @include media($tablet-and-up){ @include span-columns(6); }
   }
